@@ -3,9 +3,58 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x:hidden;
+    font-family: 'Lato', sans-serif;
 }
 body{
     background: #333;
+    /* color: white; */
+    /* font-size: 34px; */
+}
+.section{
+    width: 100vw;
+    height: 100vh;
+
+}
+#section_first{
+    background-image: url(./assets/webImages/nemesia-production-Ev3CbUNsJPc-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+#topNavbar{
+    width: 100vw;
+    height: 10vh;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: white;
-    font-size: 34px;
+}
+#logo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+#logoName{
+    margin-left: 10px;
+    /* width: 50px; */
+    font-weight: 300;
+    font-size: 24px;
+}
+#subPages{
+    font-size: 24px;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    /* background: green; */
+    
 }
