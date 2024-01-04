@@ -5,12 +5,40 @@
     padding: 0;
     overflow-x:hidden;
     font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background: #333;
-    /* color: white; */
-    /* font-size: 34px; */
+    
 }
+a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 5px;
+    position: relative;
+}
+#subPages a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: #EDBA58;
+    transition: all 0.3s ease-in-out;
+    /* z-index: -1; */
+}
+#subPages a:hover::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    height: 3px;
+    background: #EDBA58;
+    /* z-index: -1; */
+}
+
 .section{
     width: 100vw;
     height: 100vh;
@@ -47,6 +75,11 @@ body{
     font-weight: 300;
     font-size: 24px;
 }
+#logoBack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #subPages{
     font-size: 24px;
     display: flex;
@@ -58,3 +91,84 @@ body{
     /* background: green; */
     
 }
+
+.hamburgerMenu{
+    width: 40px;
+    height: 50%;
+    /* display: flex;
+    align-items: center; */
+    position: relative;
+    display: grid;
+    place-items: center;
+    display: none;
+}
+.hamburgerMenu span{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg) translateX(0px);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    transform-origin: top left;
+}
+.hamburgerMenu span:nth-child(1){
+    display: block;
+    background: #EDBA58;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+}
+
+.hamburgerMenu span:nth-child(2) {
+    display: block;
+    top: 5px;
+    left: 0;
+    background: #EDBA58;
+    width: 20px;
+    height: 3px;
+    opacity: 1;
+  }
+  
+  .hamburgerMenu span:nth-child(3) {
+    display: block;
+    width: 40px;
+    height: 3px;
+    top: 10px;
+    left: 0;
+    background: #EDBA58;
+  }
+  .toggleMenu span:nth-child(2) {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  .toggleMenu span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .toggleMenu span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    #topNavbar{
+        justify-content: space-between;
+    }
+    #subPages{
+        display: none;
+    }
+    .hamburgerMenu{
+        margin-right: 20px;
+        display: grid;
+    }
+    #logo{
+        justify-content: flex-start;
+        width: 50%;
+        margin-left: 20px;
+    }
+    #logoName{
+        font-size: 18px;
+    }
+  
+  }
