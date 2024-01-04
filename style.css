@@ -149,6 +149,57 @@ a{
 .toggleMenu span:nth-child(3) {
     transform: rotate(-45deg);
 }
+
+@media (max-width: 1200px) {
+    #topNavbar{
+        justify-content: space-between;
+    }
+    #subPages{
+        display: none;
+    }
+    .hamburgerMenu{
+        width: 60px;
+        margin-right: 120px;
+        display: grid;
+        overflow: hidden;
+    }
+    #logo{
+        justify-content: flex-start;
+        width: 50%;
+        margin-left: 120px;
+    }
+    #logoName{
+        font-size: 24px;
+    }
+    .hamburgerMenu span:nth-child(1){
+        display: block;
+        background: #EDBA58;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+    }
+    
+    .hamburgerMenu span:nth-child(2) {
+        display: block;
+        top: 5px;
+        left: 0;
+        background: #EDBA58;
+        width: 30px;
+        height: 3px;
+        opacity: 1;
+    }
+    .hamburgerMenu span:nth-child(3) {
+        display: block;
+        width: 60px;
+        height: 3px;
+        top: 10px;
+        left: 0;
+        background: #EDBA58;
+    }
+}
+
+
 /* *********** mobile view ********************************** */
     @media (max-width: 768px) {
     #topNavbar{
@@ -169,4 +220,32 @@ a{
     #logoName{
         font-size: 18px;
     }
+    .hamburgerMenu span:nth-child(1){
+        display: block;
+        background: #EDBA58;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+    }
+    
+    .hamburgerMenu span:nth-child(2) {
+        display: block;
+        top: 5px;
+        left: 0;
+        background: #EDBA58;
+        width: 20px;
+        height: 3px;
+        opacity: 1;
+    }
+    .hamburgerMenu span:nth-child(3) {
+        display: block;
+        width: 40px;
+        height: 3px;
+        top: 10px;
+        left: 0;
+        background: #EDBA58;
+    }
 }
+
+    
