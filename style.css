@@ -130,28 +130,27 @@ a{
     width: 20px;
     height: 3px;
     opacity: 1;
-  }
-  
-  .hamburgerMenu span:nth-child(3) {
+}
+.hamburgerMenu span:nth-child(3) {
     display: block;
     width: 40px;
     height: 3px;
     top: 10px;
     left: 0;
     background: #EDBA58;
-  }
-  .toggleMenu span:nth-child(2) {
+}
+.toggleMenu span:nth-child(2) {
     transform: translateX(-50px);
     opacity: 0;
-  }
-  .toggleMenu span:nth-child(1) {
+}
+.toggleMenu span:nth-child(1) {
     transform: rotate(45deg);
-  }
-  .toggleMenu span:nth-child(3) {
+}
+.toggleMenu span:nth-child(3) {
     transform: rotate(-45deg);
-  }
-
-  @media (max-width: 768px) {
+}
+/* *********** mobile view ********************************** */
+    @media (max-width: 768px) {
     #topNavbar{
         justify-content: space-between;
     }
@@ -170,5 +169,4 @@ a{
     #logoName{
         font-size: 18px;
     }
-  
-  }
+}
