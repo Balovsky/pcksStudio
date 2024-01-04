@@ -149,7 +149,9 @@ a{
 .toggleMenu span:nth-child(3) {
     transform: rotate(-45deg);
 }
-
+.mobileSubPages{
+    display: none;
+}
 @media (max-width: 1200px) {
     #topNavbar{
         justify-content: space-between;
@@ -197,6 +199,25 @@ a{
         left: 0;
         background: #EDBA58;
     }
+    .mobileSubPages{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 90%;
+        background: yellow;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-100vw);
+        display: block;
+        /* overflow: hidden; */
+    }
+    .openMenu{
+        transform: translateX(0vw);
+    }
+    .openMenu body {
+        overflow: hidden;
+    }
+    
 }
 
 
