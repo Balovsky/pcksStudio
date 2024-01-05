@@ -12,7 +12,5 @@ window.addEventListener('DOMContentLoaded', ()=>{
 btn.addEventListener('click', () =>{
     btn.classList.toggle('toggleMenu')
     mobileMenu.classList.toggle('openMenu')
-    sections.forEach(section => {
-        section.style.display = 'none';
-    })
+
 });
