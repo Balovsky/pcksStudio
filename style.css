@@ -16,6 +16,7 @@ body{
     scrollbar-width: none;  /* Firefox */
     
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -63,7 +64,7 @@ a{
     position: relative;
 }
 #section_second{
-    height: 3000px;
+    /* height: 3000px; */
 }
 /* #topNavbar{
     width: 100vw;
@@ -160,6 +161,9 @@ a{
     left: 0;
     background: #EDBA58;
 }
+body.toggleMenu{
+    overflow: hidden !important;
+}
 .toggleMenu span:nth-child(2) {
     transform: translateX(-50px);
     opacity: 0;
@@ -216,10 +220,269 @@ a{
 }
 .arrowsToDown{
     position: absolute;
+    width: 100px;
+    height: 150px;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     /* background: red; */
+}
+.c-scroll-icon {
+
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-50%, 0, 0);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    backface-visibility: hidden
+  }
+  .c-scroll-icon .c-scroll-icon-line-mask {
+    position: relative;
+    overflow: hidden;
+    width: 21px;
+    height: 100px;
+    margin: 0 auto
+  }
+  .c-scroll-icon .c-scroll-icon-line {
+    position: absolute;
+    display: inline-block;
+    width: 2px;
+    height: 150px;
+    border-left: 3px solid #EDBA58;
+    top: -150px;
+    left: 10px;
+    animation: scroll-line 5s infinite;
+    transition: all cubic-bezier(.785, .135, .15, .86)
+  }
+  .c-scroll-icon-triangle-line.first,
+  .c-scroll-icon-triangle-line.last,
+  .c-scroll-icon-triangle-line.left,
+  .c-scroll-icon-triangle-line.right {
+    transition: all .6s cubic-bezier(.785, .135, .15, .86)
+  }
+  @keyframes scroll-line {
+    0% {
+      transform: translate3d(0, 0, 0)
+    }
+    40% {
+      transform: translate3d(0, 185px, 0)
+    }
+    75% {
+      transform: translate3d(0, 175px, 0)
+    }
+    100% {
+      transform: translate3d(0, 280px, 0)
+    }
+  }
+  .c-scroll-icon-triangle {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin: -10px auto 0;
+    animation: triangle-bounce 5s infinite
+  }
+  .c-scroll-icon-triangle-line,
+  .c-scroll-icon-triangle-mask {
+    position: absolute
+  }
+  .c-scroll-icon-triangle-mask.first {
+    width: 40px;
+    height: 5px;
+    right: 0;
+    overflow: hidden
+  }
+  .c-scroll-icon-triangle-mask.right {
+    width: 10px;
+    height: 30px;
+    overflow: hidden;
+    right: 0
+  }
+  .c-scroll-icon-triangle-mask.left {
+    width: 10px;
+    height: 30px;
+    overflow: hidden;
+    left: 1
+  }
+  .c-scroll-icon-triangle-mask.last {
+    width: 40px;
+    height: 5px;
+    overflow: hidden
+  }
+  .c-scroll-icon-triangle-line.first {
+    border-bottom: 3px solid #EDBA58;
+    width: 30px;
+    right: 0;
+    animation: triangle-first 5s infinite
+  }
+  .c-scroll-icon-triangle-line.right {
+    border-left: 3px solid #EDBA58;
+    height: 44px;
+    transform: rotate(-163deg);
+    right: 5px;
+    top: -6px;
+    animation: triangle-right 5s infinite
+  }
+  .c-scroll-icon-triangle-line.left {
+    border-left: 3px solid #EDBA58;
+    height: 40px;
+    transform: rotate(163deg);
+    left: 5px;
+    top: -3px;
+    animation: triangle-left 5s infinite;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .c-scroll-icon-triangle-line.last {
+    border-bottom: 1px solid #EDBA58;
+    width: 120px;
+    left: 0;
+    animation: triangle-last 5s infinite
+  }
+  @keyframes triangle-bounce {
+    0%, 100% {
+      transform: translate3d(0, -5px, 0)
+    }
+    50% {
+      transform: translate3d(0, 5px, 0)
+    }
+  }
+  @keyframes triangle-first {
+    0%, 20% {
+      transform: translate3d(-40px, 0, 0)
+    }
+    30%,
+    80% {
+      transform: translate3d(10px, 0, 0)
+    }
+    100%,
+    85% {
+      transform: translate3d(30px, 0, 0)
+    }
+  }
+  @keyframes triangle-right {
+    0%, 25% {
+      transform: rotate(-163deg) translate3d(0, 40px, 0)
+    }
+    40%,
+    84% {
+      transform: rotate(-163deg) translate3d(0, 0, 0)
+    }
+    100%,
+    90% {
+      transform: rotate(-163deg) translate3d(0, -37px, 0)
+    }
+  }
+  @keyframes triangle-left {
+    0%, 33% {
+      transform: rotate(163deg) translate3d(0, -34px, 0)
+    }
+    50%,
+    88% {
+      transform: rotate(163deg) translate3d(0, 0, 0)
+    }
+    100%,
+    95% {
+    transform: rotate(163deg) translate3d(0, 38px, 0)
+    }
+}
+@keyframes triangle-last {
+    0%, 87.5% {
+    transform: translate3d(-120px, 0, 0)
+    }
+    91% {
+    transform: translate3d(-80px, 0, 0)
+    }
+    100% {
+    transform: translate3d(45px, 0, 0)
+    }
+
+}
+.secondMainContainer{
+    width: 80%;
+    margin: 0 auto;
+    /* background: green; */
+    padding-top: 20px;
+}
+.secondSHeader{
+    margin-top: 5%;
+    width: 60%;
+    color: #EDBA58;
+    font-size: 40px;
+    font-weight: 700;
+    /* background: pink; */
+}
+.headerDesc{
+    display: block;
+    color: white;
+    font-size: 34px;
+    padding-top: 30px;
+}
+.photoTypesColumns{
+    width: 100%;
+    margin-top: 2%;
+    /* background: yellowgreen; */
+    display: flex;
+}
+.photosColumn{
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* background: pink; */
+    color: white;
+    font-size: 26px;
+}
+.photos3dDesc{
+padding-bottom: 10%;
+}
+.photosDesc{
+    padding-top: 20px;
+}
+.bgDesc{
+    padding-top: 40px;
+}
+.focusDesc{
+    /* display: inline-block; */
+    /* background: white; */
+    color: black;
+    margin: 0px 5px;
+    padding: 5px;
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+.focusDesc::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transition: transform 0.15s ease-out 0s;
+}
+.focusDesc:hover::before{
+    transform: translate(5px, -5px);
+}
+.focusDesc::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #EDBA58;
+    transition: transform 0.15s ease-out 0s;
+}
+.focusDesc:hover::after{
+    transform: translate(-5px, 5px)
+}
+.descTest{
+    display: block;
+    margin-top: 10px;
 }
 /* ###############TABLET################## */
 @media (max-width: 1366px) {
@@ -408,4 +671,3 @@ a{
     }
 }
 
-    

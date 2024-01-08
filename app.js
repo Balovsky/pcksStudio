@@ -2,7 +2,10 @@ console.log('connected to html');
 const btn = document.querySelector('.hamburgerMenu')
 const mobileMenu = document.querySelector('.mobileSubPages')
 const mobileSubPages = document.querySelectorAll('.subPage')
-console.log(mobileMenu.innerHTMLileMenu);
+const currentSection = document.querySelector('.mobileSubPages')
+const arrowToNextSection = document.querySelector('.arrowsToDown')
+// console.log(curre);
+console.log(currentSection.nextElementSibling);
 
 window.addEventListener('DOMContentLoaded', ()=>{
     btn.classList.remove('toggleMenu')
@@ -22,4 +25,10 @@ mobileSubPages.forEach(subPage => {
         // mobileMenu.style.display = 'none';
         btn.classList.remove('toggleMenu')
     })
+})
+
+arrowToNextSection.addEventListener('click', ()=>{
+    
+    let nextSesction = currentSection.nextElementSibling
+    nextSesction.scrollIntoView({behavior: 'smooth'})
 })
