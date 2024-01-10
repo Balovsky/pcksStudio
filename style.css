@@ -405,7 +405,7 @@ body.toggleMenu{
     padding-top: 20px;
 }
 .secondSHeader{
-    margin-top: 5%;
+    margin-top: 1%;
     width: 60%;
     color: #EDBA58;
     font-size: 40px;
@@ -482,7 +482,20 @@ padding-bottom: 10%;
 }
 .descTest{
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+}
+.secondSectionPhotoContainer{
+    width: 100%;
+    height: 1000px;
+    /* height: 600px; */
+    background-image: url(./assets/webImages/Untitled-1.png);
+    /* background: pink; */
+    border: 2px solid red;
+    margin: 5% auto 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
 }
 /* ###############TABLET################## */
 @media (max-width: 1366px) {
@@ -606,6 +619,50 @@ padding-bottom: 10%;
         justify-content: flex-start;
         margin-top: 5%;
     }
+    .secondSHeader{
+        width: 100%;
+    }
+    .photoTypesColumns{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: space-around;
+        /* background: pink; */
+        /* z-index: -1; */
+        margin: 0;
+    }
+    .photosColumn{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .photosDesc{
+        width: 50%;
+        height: auto;;
+        /* background: pink; */
+    }
+.descTest{
+        width: 100%;
+        /* background: red; */
+    }
+    .bgDesc{
+        width: 40%;
+        padding-top: 20px;
+    }
+    .secondSectionPhotoContainer{
+        width: 100%;
+        height: 900px;
+        /* height: 600px; */
+        background-image: url(./assets/webImages/tablet.png);
+        /* background: pink; */
+        border: 2px solid red;
+        margin: 5% auto 0 auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-attachment: fixed; */
+    }
     
 }
 
@@ -668,6 +725,46 @@ padding-bottom: 10%;
     }
     .firstSectionDesc{
         margin-bottom: 10%;
+    }
+    .secondSHeader{
+        width: 100%;
+    }
+    .photoTypesColumns{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* background: pink; */
+        /* z-index: -1; */
+        margin: 0;
+    }
+    .photosColumn{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .photosDesc{
+        width: 100%;
+        height: auto;;
+    }
+    .photosDesc, .descTest{
+        width: 100%;
+        /* background: red; */
+    }
+    .bgDesc{
+        width: 100%;
+    }
+    .secondSectionPhotoContainer{
+        width: 100%;
+        height: 400px;
+        /* height: 600px; */
+        background-image: url(./assets/webImages/mobile.png);
+        /* background: pink; */
+        border: 2px solid red;
+        margin: 5% auto 0 auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-attachment: fixed; */
     }
 }
 
