@@ -1,11 +1,12 @@
 console.log('connected to html');
+
 const btn = document.querySelector('.hamburgerMenu')
 const mobileMenu = document.querySelector('.mobileSubPages')
 const mobileSubPages = document.querySelectorAll('.subPage')
 const currentSection = document.querySelector('.mobileSubPages')
 const arrowToNextSection = document.querySelector('.arrowsToDown')
-// console.log(curre);
-console.log(currentSection.nextElementSibling);
+
+
 
 window.addEventListener('DOMContentLoaded', ()=>{
     btn.classList.remove('toggleMenu')

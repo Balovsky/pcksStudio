@@ -490,12 +490,60 @@ padding-bottom: 10%;
     /* height: 600px; */
     background-image: url(./assets/webImages/Untitled-1.png);
     /* background: pink; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin: 5% auto 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     /* background-attachment: fixed; */
+}
+#third_section{
+    width: 80%;
+    height: 700px;
+    margin: 5% auto 5% auto;
+    border: 2px solid red;
+
+}
+.skillsContainer{
+    background: pink;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.skillsTextContainer{
+    /* visibility: hidden; */
+    /* z-index: -1; */
+    /* transform: translateX(-500px); */
+    display: none;
+    transition: all 0.35s ease-in-out;;
+    transform: translateY(-300px);
+}
+.skill:hover .skillsTextContainer{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0px);
+}
+.skillImg{
+    transition: all 0.35 ease-in-out;
+    transform: translateX(0);
+    height: 100%;
+    object-fit: cover;
+}
+.skill:hover .skillImg{
+    transform: translateX(0);
+}
+.skill{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    transition: all 0.35s ease-in-out;
+}
+.skill:hover{
+    width: 200%;
 }
 /* ###############TABLET################## */
 @media (max-width: 1366px) {
@@ -656,7 +704,7 @@ padding-bottom: 10%;
         /* height: 600px; */
         background-image: url(./assets/webImages/tablet.png);
         /* background: pink; */
-        border: 2px solid red;
+        /* border: 2px solid red; */
         margin: 5% auto 0 auto;
         background-size: contain;
         background-repeat: no-repeat;
@@ -759,7 +807,7 @@ padding-bottom: 10%;
         /* height: 600px; */
         background-image: url(./assets/webImages/mobile.png);
         /* background: pink; */
-        border: 2px solid red;
+        /* border: 2px solid red; */
         margin: 5% auto 0 auto;
         background-size: contain;
         background-repeat: no-repeat;
