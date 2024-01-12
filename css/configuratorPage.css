@@ -1,0 +1,11 @@
+#section_first{
+    background: #333;
+}
+
+.active{
+    /* margin-top: 20px; */
+    color: #EDBA58;
+}
+.produktPhotoConfiguratorContainer{
+    background: pink;
+}

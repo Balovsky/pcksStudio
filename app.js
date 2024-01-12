@@ -9,6 +9,12 @@ const arrowToNextSection = document.querySelector('.arrowsToDown')
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
+    if (window.location.hash) {
+        var targetElement = document.querySelector(window.location.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     btn.classList.remove('toggleMenu')
     mobileMenu.classList.remove('openMenu')
     // mobileMenu.style.display = 'block';
