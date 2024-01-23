@@ -5,6 +5,7 @@ const mobileMenu = document.querySelector('.mobileSubPages')
 const mobileSubPages = document.querySelectorAll('.subPage')
 const currentSection = document.querySelector('.mobileSubPages')
 const arrowToNextSection = document.querySelector('.arrowsToDown')
+const upBtn = document.querySelector('.upArrow')
 
 
 
@@ -18,6 +19,15 @@ window.addEventListener('DOMContentLoaded', ()=>{
     btn.classList.remove('toggleMenu')
     mobileMenu.classList.remove('openMenu')
     // mobileMenu.style.display = 'block';
+})
+
+window.addEventListener('scroll', ()=>{
+    let heightPosition = scrollY 
+    if (heightPosition>0){
+        upBtn.classList.add('activeUp')
+    }else{
+        upBtn.classList.remove('activeUp')
+    }
 })
 
 btn.addEventListener('click', () =>{
@@ -38,4 +48,9 @@ arrowToNextSection.addEventListener('click', ()=>{
     
     let nextSesction = currentSection.nextElementSibling
     nextSesction.scrollIntoView({behavior: 'smooth'})
+})
+
+upBtn.addEventListener('click', ()=>{
+    let home = document.querySelector('#section_first')
+    home.scrollIntoView({behavior: 'smooth'})
 })
