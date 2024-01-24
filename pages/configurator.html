@@ -6,8 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../css/globalStyle.css"> -->
     <link rel="stylesheet" href="../css/globalStyle.css">
-    <link rel="stylesheet" href="../css/configuratorPage.css">
+<link rel="stylesheet" href="../css/configurationStyle.css">
+
 
 
     <title>konfigurator</title>
@@ -15,9 +17,9 @@
 <body>
     <div class="cursor"></div>
     <div class="upArrow">
-        <img src="./assets/uptoup/icons8-slide-up-48.png" alt="">
+        <img src="../assets/uptoup/icons8-slide-up-48.png" alt="">
     </div>
-    <section class="section" id="section_first">
+    <section class="section" id="config_first_section">
         <nav id="topNavbar">
             <div class="navBar" id="logo">
                 <a href="../index.html" id="logoBack">
@@ -41,7 +43,20 @@
         </nav>
         </div>
         <div class="produktPhotoConfiguratorContainer">
-            <h1>this is a configurator Page</h1>
+            <h1>Możliwości presonalizacji twojego produktu</h1>
+            <div class="configuratorContainer">
+                <div class="productImg">
+                    <img class="transparentBg" src="../assets/configuratorPage/trans[arent bg.jpg" alt="">
+                    <img src="../assets/configuratorPage/but bez tla.png" alt="">
+                    <img class="shadow" src="../assets/configuratorPage/cień do buta.png" alt="">
+                </div>
+                <div class="productSettingsContainer">
+                    <div class="inputContainer">
+                        <input type="checkbox" id="transparentBg" name="vehicle1" value="Bike">
+                        <label for="transparentBg"> Przeźroczyste tło</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <div class="mobileSubPages">
@@ -59,7 +74,28 @@
     </div>
 
 
-
-    <script src="../app.js"></script>
+    <footer class="footerContainer">
+        <div class="topMenuFooter">
+            <div class="footerLogo">
+                <img src="./assets/logo/Group.png" alt="">
+                <span id="logoName">PKST studio</span></div>
+            <div class="footerAdress">
+                <span class="adress">eMeF Studio</span>
+                <span class="adress">Miejscowość 223</span>
+                <span class="adress">34-130 Kalwaria Zebrzydowska</span>
+                <span class="adress"> e-mail: contact@emef.studio</span>
+                <span class="adress">tel: 555 333 222</span>
+                <span class="adress">ceo: Mariusz Franik</span>
+            </div>
+            <div class="footerSubPages">
+                <a href="./pages/configurator.html" class="subPageFooter">konfigurator</a>
+                <a href="./pages/gallery.html" class="subPageFooter">portfolio</a>
+                <a href="./pages/price.html" class="subPageFooter">cennik</a>
+                <a href="./pages/about.html" class="subPageFooter">o nas</a>
+                <a href="#section_second" class="subPageFooter">kontakt</a></div>
+        </div>
+        <div class="bottomMenuFooter"><small>&copy; Copyright 2024, Mariusz Franik. All Rights Reserved</small></div>
+    </footer>
+    <script src="../js/configuratorPageApp.js"></script>
 </body>
 </html>

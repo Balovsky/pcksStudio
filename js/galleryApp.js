@@ -16,9 +16,6 @@ const firstTitle = document.querySelector('.firstTitle')
 const firstSectionDesc = document.querySelector('.firstSectionDesc')
 const arrowsToDown = document.querySelector('.arrowsToDown')
 
-const interactiveGrowArray = [firstTitle, firstSectionDesc]
-console.log(scrollY);
-
 window.addEventListener('DOMContentLoaded', ()=>{
     if (window.location.hash) {
         var targetElement = document.querySelector(window.location.hash);
@@ -31,6 +28,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
     // mobileMenu.style.display = 'block';
 })
 
+
+console.log(window);
 window.addEventListener('scroll', ()=>{
     let heightPosition = scrollY 
     if (heightPosition>0){
@@ -38,6 +37,7 @@ window.addEventListener('scroll', ()=>{
     }else{
         upBtn.classList.remove('activeUp')
     }
+    // console.log(heightPosition);
 })
 
 window.addEventListener('mousemove', (e)=>{
@@ -45,7 +45,6 @@ window.addEventListener('mousemove', (e)=>{
     let y = e.clientY
     customCursor.style.top = y + 'px'
     customCursor.style.left = x + 'px'
-
 })
 
 btn.addEventListener('click', () =>{
@@ -62,14 +61,10 @@ mobileSubPages.forEach(subPage => {
     })
 })
 
-arrowToNextSection.addEventListener('click', ()=>{
-    
-    let nextSesction = currentSection.nextElementSibling
-    nextSesction.scrollIntoView({behavior: 'smooth'})
-})
+
 
 upBtn.addEventListener('click', ()=>{
-    let home = document.querySelector('#section_first')
+    let home = document.querySelector('#config_first_section')
     home.scrollIntoView({behavior: 'smooth'})
 })
 
@@ -91,23 +86,4 @@ homeLogo.addEventListener('mouseleave', () =>{
     })
 
 
-    interactiveGrowArray.forEach(grow => {
-        grow.addEventListener('mouseenter', () =>{
-            // customCursor.classList.add('grow')
-            customCursor.style.transform = `scale(10)`
-            customCursor.style.mixBlendMode = 'difference';
-            customCursor.style.backgroundColor = '#EDBA58';
-        })
-        grow.addEventListener('mouseleave', () =>{
-            customCursor.style.transform = `scale(1)`
-            customCursor.style.mixBlendMode = 'difference';
-            customCursor.style.backgroundColor = 'white';
-        })
-    })
 
-    arrowsToDown.addEventListener('mouseenter', () =>{
-        customCursor.style.transform = `scale(6)`
-    })
-    arrowsToDown.addEventListener('mouseleave', () =>{
-    customCursor.style.transform = `scale(1)`
-    })
