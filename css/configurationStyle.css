@@ -23,7 +23,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
 }
 .productSettingsContainer{
     /* background: blue; */
@@ -31,4 +31,7 @@
     display: flex;
     justify-content: center;
     /* height: 99%; */
+}
+.transparentBg{
+    opacity: 0;
 }
