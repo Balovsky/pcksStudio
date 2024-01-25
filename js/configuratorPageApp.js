@@ -8,6 +8,11 @@ const arrowToNextSection = document.querySelector('.arrowsToDown')
 const upBtn = document.querySelector('.upArrow')
 
 const removeBgCheckbox = document.querySelector('#transparentBg')
+const naturalShadowCheckbox = document.querySelector('#naturalShadow')
+const mirroringCheckbox = document.querySelector('#mirroring')
+
+const solidColors = document.querySelectorAll('.color')
+const rgbColorInput = document.querySelector('#chooseBgProductColor')
 
 const customCursor = document.querySelector('.cursor')
 
@@ -28,7 +33,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
     btn.classList.remove('toggleMenu')
     mobileMenu.classList.remove('openMenu')
     // mobileMenu.style.display = 'block';
+
 })
+
 
 
 console.log(window);
@@ -96,3 +103,36 @@ homeLogo.addEventListener('mouseleave', () =>{
             transparentBgImg.style.opacity = 0
         }
     })
+    naturalShadowCheckbox.addEventListener('change', ()=>{
+        let naturalShadowImg = document.querySelector('.shadow')
+        if(naturalShadowCheckbox.checked){
+            naturalShadowImg.style.opacity = 1
+        }else{
+            naturalShadowImg.style.opacity = 0
+        }
+    })
+    mirroringCheckbox.addEventListener('change', ()=>{
+        let mirroringImg = document.querySelector('.mirroring')
+        if(mirroringCheckbox.checked){
+            mirroringImg.style.opacity = 1
+        }else{
+            mirroringImg.style.opacity = 0
+        }
+    })
+
+solidColors.forEach(solidColor => {
+    solidColor.addEventListener('click', ()=>{
+        let bgToChange = document.querySelector('.productImg')
+        let solidColorBox = window.getComputedStyle(solidColor)
+        let getSolidColorBox = solidColorBox.backgroundColor;
+        bgToChange.style.backgroundColor = getSolidColorBox
+        // console.log(bgToChange);
+    })
+})
+
+rgbColorInput.addEventListener('input', ()=>{
+    let bgToChange = document.querySelector('.productImg')
+    let getInputColor = rgbColorInput.value
+    
+    bgToChange.style.backgroundColor = getInputColor
+})
