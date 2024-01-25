@@ -2,7 +2,7 @@
 .produktPhotoConfiguratorContainer{
     width: 80%;
     margin: 0 auto;
-    background: pink;
+    /* background: pink; */
 }
 .configuratorContainer{
     margin-top: 20px;
@@ -12,7 +12,7 @@
 .productImg{
     width: 70%;
     height: 600px;
-    background: whitesmoke;
+    background: #EDBA58;
     position: relative;
     transition: background-color 0.35s ease-in-out;
 }
@@ -46,7 +46,7 @@
     width: 80%;
 }
 .shadow{
-    opacity: 0;
+    opacity: 1;
 }
 .mirroring{
     opacity: 0;
