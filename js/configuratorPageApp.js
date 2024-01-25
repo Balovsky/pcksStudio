@@ -94,9 +94,9 @@ homeLogo.addEventListener('mouseleave', () =>{
     customCursor.style.transform = `scale(1)`
     })
 
-
+    let transparentBgImg = document.querySelector('.transparentBg')
     removeBgCheckbox.addEventListener('change', () =>{
-        let transparentBgImg = document.querySelector('.transparentBg')
+        
         if(removeBgCheckbox.checked) {
             transparentBgImg.style.opacity = 1
         }else {
@@ -122,6 +122,8 @@ homeLogo.addEventListener('mouseleave', () =>{
 
 solidColors.forEach(solidColor => {
     solidColor.addEventListener('click', ()=>{
+        removeBgCheckbox.checked = false;
+        transparentBgImg.style.opacity = 0
         let bgToChange = document.querySelector('.productImg')
         let solidColorBox = window.getComputedStyle(solidColor)
         let getSolidColorBox = solidColorBox.backgroundColor;
@@ -131,8 +133,9 @@ solidColors.forEach(solidColor => {
 })
 
 rgbColorInput.addEventListener('input', ()=>{
+    removeBgCheckbox.checked = false;
     let bgToChange = document.querySelector('.productImg')
     let getInputColor = rgbColorInput.value
-    
+    transparentBgImg.style.opacity = 0
     bgToChange.style.backgroundColor = getInputColor
 })
