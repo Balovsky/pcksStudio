@@ -784,7 +784,7 @@ a{
         transform: translateX(-100vw);
         display: block;
         /* overflow: hidden; */
-        z-index: 999;
+        z-index: 998;
     }
     .openMenu{
         transform: translateX(0vw);

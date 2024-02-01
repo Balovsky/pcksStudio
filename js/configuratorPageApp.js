@@ -10,6 +10,7 @@ const upBtn = document.querySelector('.upArrow')
 const removeBgCheckbox = document.querySelector('#transparentBg')
 const naturalShadowCheckbox = document.querySelector('#naturalShadow')
 const mirroringCheckbox = document.querySelector('#mirroring')
+const watterMarkCheckbox = document.querySelector('#watterMark')
 
 const solidColors = document.querySelectorAll('.color')
 const rgbColorInput = document.querySelector('#chooseBgProductColor')
@@ -111,6 +112,14 @@ homeLogo.addEventListener('mouseleave', () =>{
             naturalShadowImg.style.opacity = 0
         }
     })
+    watterMarkCheckbox.addEventListener('change', ()=>{
+        let watterMarkImg = document.querySelector('.watterMark')
+        if(watterMarkCheckbox.checked){
+            watterMarkImg.style.opacity = 0.5
+        }else{
+            watterMarkImg.style.opacity = 0
+        }
+    })
     mirroringCheckbox.addEventListener('change', ()=>{
         let mirroringImg = document.querySelector('.mirroring')
         if(mirroringCheckbox.checked){
@@ -127,6 +136,7 @@ solidColors.forEach(solidColor => {
         let bgToChange = document.querySelector('.productImg')
         let solidColorBox = window.getComputedStyle(solidColor)
         let getSolidColorBox = solidColorBox.backgroundColor;
+        bgToChange.style.backgroundImage = 'none'
         bgToChange.style.backgroundColor = getSolidColorBox
         // console.log(bgToChange);
     })
@@ -137,5 +147,21 @@ rgbColorInput.addEventListener('input', ()=>{
     let bgToChange = document.querySelector('.productImg')
     let getInputColor = rgbColorInput.value
     transparentBgImg.style.opacity = 0
+    bgToChange.style.backgroundImage = 'none'
     bgToChange.style.backgroundColor = getInputColor
 })
+
+const shadowBoxes = document.querySelectorAll('.shadowBg')
+
+shadowBoxes.forEach(shadowBox => {
+    shadowBox.addEventListener('click', ()=>{
+        let bgToChange = document.querySelector('.productImg')
+        let getBoxBgImage = shadowBox.querySelector('.shadowBgSrc').src
+        // console.log((getBoxBgImage));
+        removeBgCheckbox.checked = false;
+        transparentBgImg.style.opacity = 0
+        bgToChange.style.backgroundImage = 'url("' + getBoxBgImage + '")';
+    })
+})
+
+
