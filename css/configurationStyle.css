@@ -212,3 +212,21 @@
     /* background: pink; */
     height: 2000px;
 }
+
+@media (max-width: 1366px) {
+    /* .productSettingsContainer{
+        display: flex;
+        flex-direction: row;
+    } */
+    .configuratorContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .productImg{
+        width: 100%;
+    }
+    .productSettingsContainer{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
