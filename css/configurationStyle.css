@@ -1,0 +1,124 @@
+
+.produktPhotoConfiguratorContainer{
+    width: 80%;
+    margin: 0 auto;
+    /* background: pink; */
+}
+.configuratorContainer{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+.productImg{
+    width: 70%;
+    height: 600px;
+    background: #EDBA58;
+    position: relative;
+    transition: background-color 0.35s ease-in-out;
+}
+.productImg img{
+    width: 99%;
+    height: 99%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color, opacity 0.35s ease-in-out;
+}
+.productSettingsContainer{
+    /* background: blue; */
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    /* height: 99%; */
+}
+.transparentBg{
+    opacity: 0;
+}
+
+.inputsContainer{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* background: red; */
+    width: 80%;
+}
+.shadow{
+    opacity: 1;
+}
+.mirroring{
+    opacity: 0;
+}
+.solidColors{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.color{
+    width: 65px;
+    height: 65px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.color1{
+    background: white;
+}
+.color2{
+    background: #f99c9c;
+}
+.color3{
+    background: #8278f5;
+}
+.color4{
+    background: #b5ff9b;
+}
+.color5{
+    background: #edff7c;
+}
+.color6{
+    background: #6c508f;
+}
+.color7{
+    background: #1774b8;
+}
+.color8{
+    width: 65px;
+    height: 65px;
+    border: 2px solid black;
+    margin: 10px;    
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: url(../assets/configuratorPage/rgbBG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#chooseBgProductColor{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 70%;
+    height: 70%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    /* border-radius: 50%; */
+}
+#chooseBgProductColor::-webkit-color-swatch {
+    border: none;
+    /* border-radius: 5px; */
+}
+
+/* Dostosuj wygląd strzałki rozwijającej obszar wyboru koloru */
+#chooseBgProductColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+/* Dostosuj wygląd samego obszaru wyboru koloru */
+#chooseBgProductColor::-webkit-color-swatch-thumb {
+    border: none;
+    /* border-radius: 5px; */
+}
