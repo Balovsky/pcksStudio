@@ -16,6 +16,7 @@ body{
     /* -ms-overflow-style: none;
     scrollbar-width: none;  */
     cursor: none;
+    padding-top: env(safe-area-inset-top);
 }
 .active{
     /* margin-top: 20px; */
