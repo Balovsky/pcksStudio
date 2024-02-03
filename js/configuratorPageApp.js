@@ -161,7 +161,14 @@ shadowBoxes.forEach(shadowBox => {
         removeBgCheckbox.checked = false;
         transparentBgImg.style.opacity = 0
         bgToChange.style.backgroundImage = 'url("' + getBoxBgImage + '")';
+        console.log('klik');
+        let elementToScroll = document.querySelector('.productImg')
+        if(elementToScroll){
+            elementToScroll.scrollIntoView({behavior: 'smooth'})
+        }
     })
+
+    
 })
 
 
