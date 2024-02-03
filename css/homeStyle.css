@@ -13,8 +13,6 @@ body::-webkit-scrollbar {
   }
 body{
     background: #333;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
     cursor: none;
 }
 a{
