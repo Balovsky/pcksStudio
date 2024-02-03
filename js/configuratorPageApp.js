@@ -162,7 +162,7 @@ shadowBoxes.forEach(shadowBox => {
         transparentBgImg.style.opacity = 0
         bgToChange.style.backgroundImage = 'url("' + getBoxBgImage + '")';
         console.log('klik');
-        let elementToScroll = document.querySelector('.productImg')
+        let elementToScroll = document.querySelector('.imageCongifTitle')
         if(elementToScroll){
             elementToScroll.scrollIntoView({behavior: 'smooth'})
         }
