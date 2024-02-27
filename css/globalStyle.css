@@ -135,7 +135,9 @@ a{
     align-items: center;
     justify-content: space-around;
     color: white;
+    /* background: blue; */
 }
+
 #logo{
     width: 30%;
     height: 100%;
@@ -147,15 +149,26 @@ a{
 }
 #logoName{
     margin-left: 10px;
-    /* width: 50px; */
+    width: auto;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 30px;
 }
 #logoBack{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* margin-left: 30px; */
+    margin-top: 10px;
+    /* background: red; */
 }
+#logoBack img{
+    /* width: 20%; */
+    height: 100%;    
+    object-fit: contain;
+}
+
 #subPages{
     font-size: 24px;
     display: flex;
@@ -245,29 +258,49 @@ body.toggleMenu{
     /* background: pink; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
 }
 .footerLogo{
+    width: 30%;
+    height: 100%;
     /* background: red; */
     display: flex;
+    justify-content: center;
     /* place-items: center; */
     align-items: center;
-
+}
+.footerLogo img{
+    width: 20%;
+    object-fit: contain;
 }
 .footerAdress{
+    width: 30%;
     /* background: yellow; */
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: 20px;
 }
+.adress{
+    margin: 5px 0px 5px 0px;
+}
 .footerSubPages{
+    width: 30%;
     /* background: blue; */
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 2px;
     position: relative;
+    /* justify-content: space-around; */
+}
+.adressData, .subPagesData{
+    display: flex;
+    flex-direction: column;
 }
 .subPageFooter{
     padding: 5px;
@@ -279,7 +312,7 @@ body.toggleMenu{
     height: 10%;
     /* background: blue; */
     font-size: 18px;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 10px 0;
     
 }
 .footerSubPages a::before{
@@ -342,7 +375,12 @@ a{
         margin-left: 120px;
     }
     #logoName{
-        font-size: 24px;
+        font-size: 30px;
+
+    }
+    #logoBack{
+        margin-left: 0px;
+        justify-content: start;
     }
     .hamburgerMenu span:nth-child(1){
         display: block;
@@ -432,6 +470,9 @@ a{
         justify-content: flex-start;
         width: 50%;
         margin-left: 20px;
+    }
+    #logoBack{
+        margin-left: 0px;
     }
     #logoName{
         font-size: 18px;
