@@ -18,7 +18,8 @@ const rgbColorInput = document.querySelector('#chooseBgProductColor')
 const customCursor = document.querySelector('.cursor')
 
 const subPages = document.querySelectorAll('.subPage')
-const homeLogo = document.querySelector('#logoBack')
+const homeLogo = document.querySelector('#logoLogo')
+const hometext = document.querySelector('#logoName')
 
 const firstTitle = document.querySelector('.firstTitle')
 const firstSectionDesc = document.querySelector('.firstSectionDesc')
@@ -89,11 +90,22 @@ subPages.forEach(subPage => {
 })
 
 homeLogo.addEventListener('mouseenter', () =>{
-        customCursor.style.transform = `scale(6)`
-    })
+    customCursor.style.transform = `scale(6)`
+})
 homeLogo.addEventListener('mouseleave', () =>{
-    customCursor.style.transform = `scale(1)`
-    })
+customCursor.style.transform = `scale(1)`
+})
+
+hometext.addEventListener('mouseenter', () =>{
+    customCursor.style.transform = `scale(6)`
+    customCursor.style.mixBlendMode = 'difference';
+    customCursor.style.backgroundColor = '#EDBA58';
+})
+hometext.addEventListener('mouseleave', () =>{
+customCursor.style.transform = `scale(1)`
+customCursor.style.mixBlendMode = 'difference';
+        customCursor.style.backgroundColor = 'white';
+})
 
     let transparentBgImg = document.querySelector('.transparentBg')
     removeBgCheckbox.addEventListener('change', () =>{
