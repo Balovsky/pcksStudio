@@ -920,6 +920,9 @@ a{
         width: 50%;
         margin-left: 20px;
     }
+    #logoBack{
+        margin-left: 0px;
+    }
     #logoName{
         font-size: 18px;
     }
@@ -1019,7 +1022,25 @@ a{
         visibility: visible;
         transition: all 0.35s ease-in-out;
     }
+    .topMenuFooter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
     .footerLogo{
+        display: none;
+    }
+    .footerAdress, .footerSubPages{
+        width: 48%;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
+    .adress{
+        margin: 0;
+        padding: 0;
+    }
+    .cursor{
         display: none;
     }
 }
