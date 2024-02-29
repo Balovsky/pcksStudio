@@ -18,6 +18,10 @@ body{
 a{
     cursor: none;
 }
+.active{
+    /* margin-top: 20px; */
+    color: #EDBA58;
+}
 .cursor{
     width: 10px;
     height: 10px;
