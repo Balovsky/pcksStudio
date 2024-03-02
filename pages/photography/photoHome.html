@@ -201,6 +201,20 @@
         </div>
         <div class="bottomMenuFooter"><small>&copy; Copyright 2024, Mariusz Franik. All Rights Reserved</small></div>
     </footer>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Zapobiegamy domyślnej akcji przeglądarki
+
+            // Tutaj możesz dodać kod do wysłania danych formularza za pomocą AJAX
+            // oraz wyświetlenia komunikatu o sukcesie
+
+            // Na przykład:
+            alert("Wiadomość została wysłana!");
+        });
+        console.log(document.querySelector("form"));
+    });
+    </script>
     <!-- <script type="module" src="./objects.js"></script> -->
     <script src="../../app.js"></script>
 </body>
