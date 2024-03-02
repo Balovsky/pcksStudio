@@ -202,17 +202,26 @@
         <div class="bottomMenuFooter"><small>&copy; Copyright 2024, Mariusz Franik. All Rights Reserved</small></div>
     </footer>
     <script>
-         document.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector("form").addEventListener("submit", function(event) {
             event.preventDefault(); // Zapobiegamy domyślnej akcji przeglądarki
 
-            // Tutaj możesz dodać kod do wysłania danych formularza za pomocą AJAX
-            // oraz wyświetlenia komunikatu o sukcesie
+            const formData = new FormData(this);
 
-            // Na przykład:
-            alert("Wiadomość została wysłana!");
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(() => {
+                alert("Wiadomość została wysłana!");
+                // Tutaj możesz dodać kod do obsługi sukcesu wysłania formularza
+            })
+            .catch(error => {
+                alert("Wystąpił błąd podczas wysyłania formularza: " + error);
+                // Tutaj możesz dodać kod do obsługi błędu wysyłania formularza
+            });
         });
-        console.log(document.querySelector("form"));
     });
     </script>
     <!-- <script type="module" src="./objects.js"></script> -->
