@@ -218,12 +218,12 @@
             .then(() => {
                 showCustomAlert("Wiadomość została wysłana!");
             setTimeout(hideCustomAlert, 3000);
-                // Tutaj możesz dodać kod do obsługi sukcesu wysłania formularza
+            form.reset();
             })
             .catch(error => {
                 showCustomAlert("Wystąpił błąd podczas wysyłania formularza: " + error);
             setTimeout(hideCustomAlert, 3000);
-                // Tutaj możesz dodać kod do obsługi błędu wysyłania formularza
+                
             });
         });
     });
@@ -233,13 +233,13 @@
     const alertMessage = document.getElementById("alertMessage");
     alertMessage.textContent = message;
     customAlert.style.display = "block";
-    customAlert.classList.add("custom-alert"); // Dodajemy klasę dla animacji
+    customAlert.classList.add("sendingEmailPopup");
     }   
 
     function hideCustomAlert() {
     const customAlert = document.getElementById("sendingEmailPopup");
     customAlert.style.display = "none";
-    customAlert.classList.remove("custom-alert"); // Usuwamy klasę dla animacji
+    customAlert.classList.remove("sendingEmailPopup");
     }
     </script>
     <!-- <script type="module" src="./objects.js"></script> -->
