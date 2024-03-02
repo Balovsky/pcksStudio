@@ -158,7 +158,7 @@
             </div>
         </div>
         <div id="sendingEmailPopup">
-            <p id="alertMessage">mail costął wysłanyu</p>
+            <p id="alertMessage"></p>
         </div>
     </section>
     <!-- <section class="section" id="third_section">
@@ -205,7 +205,8 @@
     </footer>
     <script>
  document.addEventListener("DOMContentLoaded", function() {
-        document.querySelector("form").addEventListener("submit", function(event) {
+        const form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
             event.preventDefault(); // Zapobiegamy domyślnej akcji przeglądarki
 
             const formData = new FormData(this);
@@ -217,12 +218,12 @@
             })
             .then(() => {
                 showCustomAlert("Wiadomość została wysłana!");
-            setTimeout(hideCustomAlert, 3000);
+            setTimeout(hideCustomAlert, 5000);
             form.reset();
             })
             .catch(error => {
                 showCustomAlert("Wystąpił błąd podczas wysyłania formularza: " + error);
-            setTimeout(hideCustomAlert, 3000);
+            setTimeout(hideCustomAlert, 5000);
                 
             });
         });
