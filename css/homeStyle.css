@@ -915,6 +915,7 @@ a{
     font-size: 20px;
     animation: fadeOut 3s ease forwards;
     display: none;
+    text-align: center;
 }
 @keyframes fadeOut {
     from { opacity: 1; }
