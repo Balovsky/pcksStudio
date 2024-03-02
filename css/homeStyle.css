@@ -598,7 +598,7 @@ padding-bottom: 10%;
     width: 80%;
     height: 700px;
     margin: 5% auto 5% auto;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
 }
 .skillsContainer{
@@ -658,6 +658,170 @@ padding-bottom: 10%;
     align-items: center;
     padding-top: 20px;
 }
+.emailDesc{
+    color: white;
+    font-size: 26px;
+    display: block;
+    margin-top: 15px;
+}
+.emailHeader{
+    margin-top: 1%;
+    width: 60%;
+    color: #EDBA58;
+    font-size: 40px;
+    font-weight: 700;
+}
+.emailContainer{
+    width: 100%;
+    height: 90%;
+    /* background: blue; */
+    display: flex;
+    justify-content: space-between;
+}
+.emailLeftBox{
+    width: 45%;
+    height: 100%;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.emailBtns{
+    /* display: inline-block; */
+    /* background: white; */
+    /* color: black; */
+    color: #EDBA58;
+    font-size: 24px;
+    margin: 20px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    /* margin: 20px; */
+    /* margin-bottom: 20px; */
+    /* border: 2px solid yellow; */
+    overflow: visible;
+}
+.emailBtns::before{
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    border: 1px solid white;
+    z-index: -1;
+    transition: transform 0.15s ease-out 0s;
+    /* border: 2px solid red; */
+}
+
+.emailBtns:hover::before{
+    transform: translate(10px, -10px);
+}
+
+.emailBtns::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    transition: transform 0.15s ease-out 0s;
+}
+.emailBtns:hover::after{
+    transform: translate(-15px, 15px)
+} 
+
+
+.questForPricing{
+    margin-top: 40px;
+}
+.emailRightBox{
+    width: 45%;
+    height: 100%;
+    /* background: yellow; */
+}
+
+.formPhoto input, textarea{
+    width: 100%;
+    background: transparent !important;
+    border: 2px solid white;
+    font-size: 26px;
+    padding: 10px;
+    color: white;
+    margin: 10px 0px;
+}
+input::placeholder, textarea::placeholder{
+    color: #EDBA58;
+}
+input:focus, textarea:focus{
+    border-width: 2px; /* Grubość ramki */
+    outline: none; /* Usunięcie domyślnej obwódki (outline) */
+    box-shadow: 0 0 5px #EDBA58; /* Dodanie cienia */
+}
+button{
+    text-decoration: none;
+    border: none;
+    background: transparent;
+}
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sendBtn{
+    color: white;
+    font-size: 20px;
+    /* padding: 20px; */
+}
+
+.sendBtn{
+    /* display: inline-block; */
+    /* background: white; */
+    color: black;
+    margin: 20px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    /* margin: 20px; */
+    /* margin-bottom: 20px; */
+    /* border: 2px solid yellow; */
+    overflow: visible;
+}
+.sendBtn::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 100%;
+    height: 100%;
+    background: #EDBA58;
+    z-index: -1;
+    transition: transform 0.15s ease-out 0s;
+    /* border: 2px solid red; */
+}
+
+.sendBtn:hover::before{
+    transform: translate(10px, -10px);
+}
+
+.sendBtn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    transition: transform 0.15s ease-out 0s;
+}
+.sendBtn:hover::after{
+    transform: translate(-5px, 5px)
+} 
 .footerLogo{
     width: 30%;
     height: 100%;
