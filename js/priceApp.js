@@ -65,7 +65,7 @@ mobileSubPages.forEach(subPage => {
 
 
 upBtn.addEventListener('click', ()=>{
-    let home = document.querySelector('#config_first_section')
+    let home = document.querySelector('#section_first')
     home.scrollIntoView({behavior: 'smooth'})
 })
 

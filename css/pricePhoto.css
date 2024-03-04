@@ -1,0 +1,96 @@
+.priceContainer{
+    width: 80%;
+    margin: 0 auto;
+    /* background: #ffffff; */
+}
+/* EDBA58 */
+.priceHeader{
+    margin-top: 50px;
+    color: white;
+    font-size: 24px;
+}
+.tableTitle{
+    color: #EDBA58;
+    font-size: 44px;
+    margin-top: 20px;
+    /* padding: ; */
+}
+.table_component {
+    margin: 20px 0px;
+    overflow: auto;
+    width: 100%;
+}
+
+.table_component table {
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.table_component caption {
+    caption-side: top;
+    text-align: left;
+}
+
+.table_component th {
+    border: 1px solid #EDBA58;
+    color: #000000;
+    padding: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.table_component td {
+    border: 1px solid #EDBA58;
+    color: white;
+    padding: 10px;
+}
+/* ######## TABLET ################################## */
+@media (max-width: 1366px) {
+
+}
+
+/* ##################### MOBILE ##################### */
+@media (max-width: 768px) {
+    .priceContainer{
+        width: 90%;
+        margin: 0 auto;
+        /* background: #ffffff; */
+    }
+    .table_component th {
+        border: 1px solid #EDBA58;
+        color: #000000;
+        padding: 5px;
+        color: white;
+        font-size: 14px;
+    }
+    .table_component table {
+        /* border: 1px solid #dededf; */
+        height: 100%;
+        width: 100%;
+        table-layout: fixed;
+        /* border-collapse: collapse; */
+        /* border-spacing: 1px; */
+        text-align: left;
+        font-size: 14px;
+        padding: 0;
+    }
+    .table_component td {
+        border: 1px solid #EDBA58;
+        color: white;
+        padding:5px 0px 5px 5px;
+    }
+    .tableTitle{
+        color: #EDBA58;
+        font-size: 34px;
+        margin-top: 20px;
+        /* padding: ; */
+    }
+    .priceHeader{
+        font-size: 24px;
+    }
+}
