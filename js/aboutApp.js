@@ -9,6 +9,9 @@ const upBtn = document.querySelector('.upArrow')
 
 const customCursor = document.querySelector('.cursor')
 
+const emefMail = 'contact@emef.studio'
+const emailBtn = document.querySelector('.emailBtns')
+
 const subPages = document.querySelectorAll('.subPage')
 const homeLogo = document.querySelector('#logoLogo')
 const hometext = document.querySelector('#logoName')
@@ -97,5 +100,29 @@ customCursor.style.mixBlendMode = 'difference';
         customCursor.style.backgroundColor = 'white';
 })
 
+emailBtn.addEventListener('click', ()=>{
+    var tempInput = document.createElement('input');
+  // Ustaw wartość tego elementu na adres e-mail
+  tempInput.value = emefMail;
+  // Dodaj ten element do ciała dokumentu
+  document.body.appendChild(tempInput);
+  // Wybierz jego zawartość
+  tempInput.select();
+  // Skopiuj jego zawartość do schowka
+  document.execCommand('copy');
+  // Usuń tymczasowy element
+  document.body.removeChild(tempInput);
+  // Wyświetl alert lub inną informację
 
+
+  var notification = document.createElement('div');
+  notification.classList.add('notification');
+  notification.textContent = 'Adres e-mail został skopiowany!';
+  document.body.appendChild(notification);
+
+  // Ustaw timer do usunięcia powiadomienia po 5 sekundach
+  setTimeout(function() {
+    document.body.removeChild(notification);
+  }, 2000);
+})
 
